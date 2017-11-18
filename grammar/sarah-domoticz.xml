@@ -1,0 +1,137 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="ruleDomoticz" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+	
+	<rule id="ruleDomoticz" scope="public">
+		<example>Sarah allume le salon</example>
+		<item>sarah</item>
+		<one-of>
+
+			<item>
+			<ruleref uri="#ruleLight"/>
+			</item>
+
+			<item>
+			<ruleref uri="#ruleSensor"/>
+			</item>
+			
+		</one-of>
+		
+		
+	</rule>
+	
+	
+	
+	
+	
+	<rule id="ruleLight" scope="public">
+	
+		<tag>out.action=new Object(); </tag>
+		<tag>out.action.plugin="domticz-http";</tag>
+		
+		<one-of>
+			
+			<item>allume <tag>out.action.action="On";</tag><tag>out.action.command="switch";</tag></item>
+
+			<item>met <tag>out.action.action="On";</tag><tag>out.action.command="switch";</tag></item>
+			
+			<item>éteins <tag>out.action.action="Off";</tag><tag>out.action.command="switch";</tag></item>
+			
+			<item>comment est <tag>out.action.command="status";</tag></item>
+
+		</one-of>
+		
+
+		<one-of>
+			
+			<item>Bureau <tag>out.action.device="21";</tag><tag>out.action.type="light";</tag></item>
+			<item>Salon <tag>out.action.device="1";</tag><tag>out.action.type="scene";</tag></item>
+			<item>spotify <tag>out.action.device="405";</tag><tag>out.action.type="light";</tag></item>
+			<item>kodi <tag>out.action.device="172";</tag><tag>out.action.type="light";</tag></item>
+			<item>la nuit <tag>out.action.device="373";</tag><tag>out.action.type="light";</tag></item>
+			<item>pause	<tag>out.action.device="404";</tag><tag>out.action.type="light";</tag></item>
+			<item>stop <tag>out.action.device="403";</tag><tag>out.action.type="light";</tag></item>
+			<item>Porte<tag>out.action.device="16";</tag><tag>out.action.type="light";</tag></item>
+			<item>Entrée <tag>out.action.device="18";</tag><tag>out.action.type="light";</tag></item>
+			<item>Couloir <tag>out.action.device="423";</tag><tag>out.action.type="light";</tag></item>
+			<item>halogene <tag>out.action.device="415";</tag><tag>out.action.type="light";</tag></item>
+			<item>Bureau <tag>out.action.device="21";</tag><tag>out.action.type="light";</tag></item>
+			<item>Lampe	<tag>out.action.device="126";</tag><tag>out.action.type="light";</tag></item>
+			<item>Chambre <tag>out.action.device="19";</tag><tag>out.action.type="light";</tag></item>
+			<item>Chambre d Adrien <tag>out.action.device="20";</tag><tag>out.action.type="light";</tag></item>
+			<item>Raspberry du Salon <tag>out.action.device="41";</tag><tag>out.action.type="light";</tag></item>
+			<item>Raspberry de la Chambre <tag>out.action.device="28";</tag><tag>out.action.type="light";</tag></item>
+			<item>Machine <tag>out.action.device="32";</tag><tag>out.action.type="light";</tag></item>
+			<item>Multimedia <tag>out.action.device="33";</tag><tag>out.action.type="light";</tag></item>
+			<item>la Télé <tag>out.action.device="147";</tag><tag>out.action.type="light";</tag></item>
+			<item>l ecran <tag>out.action.device="171";</tag><tag>out.action.type="light";</tag></item>
+			<item>Mute denon <tag>out.action.device="267";</tag><tag>out.action.type="light";</tag></item>
+			<item>wii <tag>out.action.device="173";</tag><tag>out.action.type="light";</tag></item>
+			<item>Internet <tag>out.action.device="249";</tag><tag>out.action.type="light";</tag></item>
+			<item>bar <tag>out.action.device="251";</tag><tag>out.action.type="light";</tag></item>
+			<item>cuisine <tag>out.action.device="252";</tag><tag>out.action.type="light";</tag></item>
+			<item>Sapin	<tag>out.action.device="253";</tag><tag>out.action.type="light";</tag></item>
+			<item>Toilette <tag>out.action.device="367";</tag><tag>out.action.type="light";</tag></item>
+			
+			
+			<item>la une <tag>out.action.device="153";</tag><tag>out.action.type="light";</tag></item>
+			<item>France 2 <tag>out.action.device="154";</tag><tag>out.action.type="light";</tag></item>
+			<item>France 3 <tag>out.action.device="155";</tag><tag>out.action.type="light";</tag></item>
+			<item>France 4 <tag>out.action.device="156";</tag><tag>out.action.type="light";</tag></item>
+			<item>France 5 <tag>out.action.device="157";</tag><tag>out.action.type="light";</tag></item>
+			<item>France O <tag>out.action.device="158";</tag><tag>out.action.type="light";</tag></item>
+			<item>aime six <tag>out.action.device="152";</tag><tag>out.action.type="light";</tag></item>
+			<item>arte <tag>out.action.device="159";</tag><tag>out.action.type="light";</tag></item>
+			<item>béfm <tag>out.action.device="160";</tag><tag>out.action.type="light";</tag></item>
+			<item>d17 <tag>out.action.device="162";</tag><tag>out.action.type="light";</tag></item>
+			<item>d8 <tag>out.action.device="161";</tag><tag>out.action.type="light";</tag></item>
+			<item>gulli	<tag>out.action.device="163";</tag><tag>out.action.type="light";</tag></item>
+			<item>hd1 <tag>out.action.device="168";</tag><tag>out.action.type="light";</tag></item>
+			<item>nrj12 <tag>out.action.device="164";</tag><tag>out.action.type="light";</tag></item>
+			<item>nt1 <tag>out.action.device="165";</tag><tag>out.action.type="light";</tag></item>
+			<item>rmc <tag>out.action.device="169";</tag><tag>out.action.type="light";</tag></item>
+			<item>tmc <tag>out.action.device="166";</tag><tag>out.action.type="light";</tag></item>
+			<item>w9 <tag>out.action.device="167";</tag><tag>out.action.type="light";</tag></item>
+			
+
+		</one-of>
+	
+	
+	</rule>
+	
+	
+	
+	
+	<rule id="ruleSensor" scope="public">
+	
+		<tag>out.action=new Object(); </tag>
+		<tag>out.action.plugin="domticz-http";</tag>
+		
+		<one-of>
+			
+			<item>Quelle est <tag>out.action.command="status";</tag></item>
+
+		</one-of>
+
+		<one-of>
+			
+			<item>la tempeirature <tag>out.action.action="temp";</tag></item>
+			<item>l'humidité <tag>out.action.action="humidity";</tag></item>
+			
+		</one-of>
+		
+	
+		<one-of>
+			
+			<item>du salon <tag>out.action.device="197";</tag><tag>out.action.tts="du salon";</tag></item>
+			<item>de la chambre <tag>out.action.device="201";</tag><tag>out.action.tts="de la chambre";</tag></item>
+			<item>de la chambre d'adrien <tag>out.action.device="200";</tag><tag>out.action.tts="de la chambre d'adrien";</tag></item>
+			<item>de la salle de bain <tag>out.action.device="199";</tag><tag>out.action.tts="de la salle de bain";</tag></item>
+			<item>exterieure <tag>out.action.device="198";</tag><tag>out.action.tts="extèrieure";</tag></item>
+
+		</one-of>
+	
+	
+	</rule>
+  
+  
+  
+</grammar>

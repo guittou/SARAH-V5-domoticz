@@ -1,0 +1,86 @@
+<script type="text/javascript">
+    RED.nodes.registerType('sarah-domoticz',{
+        category: 'SARAH',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value:""},
+			host: {value:"localhost", required:true},
+			port: {value:"80", required:true, validate:RED.validators.number()},
+
+        },
+        inputs:1,
+        outputs:1,
+        icon: "white-globe.png",
+        label: function() {
+            return this.name||"sarah-domoticz";
+			return this.host||"sarah-domoticz";
+			return this.port||"sarah-domoticz";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="sarah-domoticz">
+	<div class="form-row">
+		<label for="node-input-name"><i class="icon-tag"></i> Name</label>
+		<input type="text" id="node-input-name" placeholder="Name">
+	</div>
+    <div class="form-row">
+        <label for="node-input-host"><i class="icon-bookmark"></i> Host</label>
+        <input type="text" id="node-input-host">
+    </div>
+    <div class="form-row">
+        <label for="node-input-port"><i class="icon-bookmark"></i> Port</label>
+        <input type="text" id="node-input-port">
+    </div>
+
+</script>
+
+<script type="text/x-red" data-help-name="sarah-domoticz">
+	<h3>Inputs</h3>
+	<p> - <code>msg.payload.options.plugin</code>:</p>
+	<dd>à utiliser avec un module <b>switch</b> pour rediriger vers le bon plugin</dd>
+	<p></p>
+	<dd>valeur de <code>out.action.plugin</code> du fichier <b>sarah-domoticz.xml</b></dd>
+	<p></p>
+	<p> - <code>msg.payload.options.action</code>:</p>
+	<dd><b>On</b> / <b>Off</b> / <b>temp</b> / <b>humidity</b></dd>
+	<p></p>
+	<dd>valeur de <code>out.action.action</code> du fichier <b>sarah-domoticz.xml</b></dd>
+	<p></p>
+	<p> - <code>msg.payload.options.command</code>:</p>
+	<dd><b>switch</b> / <b>status</b></dd>
+	<p></p>
+	<dd>valeur de <code>out.action.command</code> du fichier <b>sarah-domoticz.xml</b></dd>
+	<p></p>
+	<p> - <code>msg.payload.options.device</code>:</p>
+	<dd><b>id</b> du device dans domoticz</dd>
+	<p></p>
+	<dd>valeur de <code>out.action.device</code> du fichier <b>sarah-domoticz.xml</b></dd>
+	<p></p>
+	<p> - <code>msg.payload.options.type</code>:</p>
+	<dd><b>light</b> / <b>scene</b></dd>
+	<p></p>
+	<dd>valeur de <code>out.action.type</code> du fichier <b>sarah-domoticz.xml</b></dd>
+	<p></p>
+	<h3>Outputs</h3>
+	<p>- <code>msg.payload</code>: renvoyé par win-sarah</p>
+	<p>- <code>msg.speak</code>: texte à lire par win-speak(ou autre)</p>
+	<p></p>
+	<h3>Détails</h3>
+    <p>module à associer aux modules SARAH </p>
+	<p>		- <b>win-sarah</b></p>
+	<p>		- <b>win-speak</b></p>
+	<p></p>
+	<p>Copier le fichier xml <b>./grammar/sarah-domoticz.xml</b> dans le dossier grammar configuré sur le module <b>win-sarah</b></p>
+	<p></p>
+	<p>modifier le fichier <b>sarah-domoticz.xml</b> pour qu'il corresponde à vos equipements sur domoticz</p>
+	<p></p>
+	<p>dans le cas de plusieur plugin utiliser un module <b>switch</b> avec comme discriminant <code>msg.payload.options.plugin</code> renvoyé par <b>win-sarah</b> (ici <b>domticz-http</b>)</p>
+	<p></p>
+	<h3>Utilisation:</h3>
+	<p></p>
+	<p>sarah allumes/eteins le salon</p>
+	<p>sarah mets rmc</p>
+	<p>sarah quelle est la température/humidité du salon</p>
+	<p>sarah comment est le salon</p>
+</script>

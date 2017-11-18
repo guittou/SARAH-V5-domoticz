@@ -1,0 +1,17 @@
+{
+    "name"          : "Sarah-Domoticz",
+    "version"       : "0.1",
+    "description"   : "permet de renvoyer un texte aléatoire pour confirmer que sarah va éffectuer un action",
+    "dependencies"  : {
+    },
+    "keywords": [ "sarah", "domoticz"],
+    "node-red"      : {
+        "version": ">=0.1",
+        "nodes"     : {
+            "sarah-domoticz": "sarah-domoticz.js"
+        }
+    },
+    "author": {
+        "name": "Guirec ANDRE"
+    }
+}
