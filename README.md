@@ -4,33 +4,33 @@
 
 - `msg.payload.options.plugin`:
 
-<dd>à utiliser avec un module **switch** pour rediriger vers le bon plugin</dd>
+à utiliser avec un module **switch** pour rediriger vers le bon plugin
 
-<dd>valeur de `out.action.plugin` du fichier **sarah-domoticz.xml**</dd>
+valeur de `out.action.plugin` du fichier **sarah-domoticz.xml**
 
 - `msg.payload.options.action`:
 
-<dd>**On** / **Off** / **temp** / **humidity**</dd>
+**On** / **Off** / **temp** / **humidity**
 
-<dd>valeur de `out.action.action` du fichier **sarah-domoticz.xml**</dd>
+valeur de `out.action.action` du fichier **sarah-domoticz.xml**
 
 - `msg.payload.options.command`:
 
-<dd>**switch** / **status**</dd>
+**switch** / **status**
 
-<dd>valeur de `out.action.command` du fichier **sarah-domoticz.xml**</dd>
+valeur de `out.action.command` du fichier **sarah-domoticz.xml**
 
 - `msg.payload.options.device`:
 
 <dd>**id** du device dans domoticz</dd>
 
-<dd>valeur de `out.action.device` du fichier **sarah-domoticz.xml**</dd>
+valeur de `out.action.device` du fichier **sarah-domoticz.xml**
 
 - `msg.payload.options.type`:
 
-<dd>**light** / **scene**</dd>
+**light** / **scene**
 
-<dd>valeur de `out.action.type` du fichier **sarah-domoticz.xml**</dd>
+valeur de `out.action.type` du fichier **sarah-domoticz.xml**
 
 ### Outputs
 
