@@ -22,7 +22,7 @@ valeur de `out.action.command` du fichier **sarah-domoticz.xml**
 
 - `msg.payload.options.device`:
 
-<dd>**id** du device dans domoticz</dd>
+**id** du device dans domoticz
 
 valeur de `out.action.device` du fichier **sarah-domoticz.xml**
 
