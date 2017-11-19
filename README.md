@@ -1,4 +1,36 @@
-#### Module Node-Red pour S.A.R.A.H V5
+### Module Node-Red pour S.A.R.A.H V5
+
+Ce module sarah-domticz permet de commander et recevoir les états des periphériques de domoticz.
+
+télécharger, extraire puis copier le repertoire **sarah-domticz** dans le dossier `\sarah\viseo-bot-framework\node_modules\`
+
+relancer sarah
+
+### configuration du module :
+
+renseigner l'adresse ip et le port du serveur domoticz.
+
+![GitHub Logo](/images/domoticz.png)
+
+Copier le fichier xml **./grammar/sarah-domoticz.xml** dans le dossier grammar configuré sur le module **win-sarah**
+
+modifier le fichier **sarah-domoticz.xml** pour qu'il corresponde à vos equipements sur domoticz
+
+	`out.action.plugin` ==> utilisé comme discriminant pour identifié le plugin
+
+	`out.action.device` ==> id du périphérique dans domoticz
+
+	`out.action.command` ==> **switch** / **status** en fonction de l'action à réaliser. (Piloter un périphérique ou recevoir un état)
+
+	`out.action.type` ==> **light** ou **scene**
+	
+	`out.action.action` ==> **On** / **Off** / **temp** / **humidity**
+
+dans le cas de plusieur plugin utiliser un module **switch** avec comme discriminant `msg.payload.options.plugin` renvoyé par **win-sarah** (ici **domticz-http**)
+
+![GitHub Logo](/images/switch.png)
+
+![GitHub Logo](/images/flow_all.png)
 
 ### Inputs
 
@@ -38,19 +70,7 @@ valeur de `out.action.type` du fichier **sarah-domoticz.xml**
 
 - `msg.speak`: texte à lire par win-speak(ou autre)
 
-### Détails
-
-module à associer aux modules SARAH
-
-- **win-sarah**
-
-- **win-speak**
-
-Copier le fichier xml **./grammar/sarah-domoticz.xml** dans le dossier grammar configuré sur le module **win-sarah**
-
-modifier le fichier **sarah-domoticz.xml** pour qu'il corresponde à vos equipements sur domoticz
-
-dans le cas de plusieur plugin utiliser un module **switch** avec comme discriminant `msg.payload.options.plugin` renvoyé par **win-sarah** (ici **domticz-http**)
+![GitHub Logo](/images/speak1.png)
 
 ### Utilisation:
 
