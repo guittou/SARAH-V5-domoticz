@@ -16,7 +16,7 @@ Copier le fichier xml **./grammar/sarah-domoticz.xml** dans le dossier grammar c
 
 modifier le fichier **sarah-domoticz.xml** pour qu'il corresponde à vos equipements sur domoticz
 
-`out.action.plugin` ==> utilisé comme discriminant pour identifié le plugin
+`out.action.plugin` ==> utilisé comme discriminant pour identifier le plugin
 
 `out.action.device` ==> id du périphérique dans domoticz
 
