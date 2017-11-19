@@ -1,7 +1,7 @@
 {
     "name"          : "Sarah-Domoticz",
     "version"       : "0.1",
-    "description"   : "permet de renvoyer un texte aléatoire pour confirmer que sarah va éffectuer un action",
+    "description"   : "permet de piloter domoticz avec sarah",
     "dependencies"  : {
     },
     "keywords": [ "sarah", "domoticz"],
