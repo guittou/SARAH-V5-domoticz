@@ -16,15 +16,15 @@ Copier le fichier xml **./grammar/sarah-domoticz.xml** dans le dossier grammar c
 
 modifier le fichier **sarah-domoticz.xml** pour qu'il corresponde à vos equipements sur domoticz
 
-out.action.plugin ==> utilisé comme discriminant pour identifié le plugin
+`out.action.plugin` ==> utilisé comme discriminant pour identifié le plugin
 
-	`out.action.device` ==> id du périphérique dans domoticz
+`out.action.device` ==> id du périphérique dans domoticz
 
-	`out.action.command` ==> **switch** / **status** en fonction de l'action à réaliser. (Piloter un périphérique ou recevoir un état)
+`out.action.command` ==> **switch** / **status** en fonction de l'action à réaliser. (Piloter un périphérique ou recevoir un état)
 
-	`out.action.type` ==> **light** ou **scene**
+`out.action.type` ==> **light** ou **scene**
 	
-	`out.action.action` ==> **On** / **Off** / **temp** / **humidity**
+`out.action.action` ==> **On** / **Off** / **temp** / **humidity**
 
 dans le cas de plusieur plugin utiliser un module **switch** avec comme discriminant `msg.payload.options.plugin` renvoyé par **win-sarah** (ici **domticz-http**)
 
