@@ -26,7 +26,7 @@ modifier le fichier **sarah-domoticz.xml** pour qu'il corresponde à vos equipem
 	
 `out.action.action` ==> **On** / **Off** / **temp** / **humidity**
 
-dans le cas de plusieur plugin utiliser un module **switch** avec comme discriminant `msg.payload.options.plugin` renvoyé par **win-sarah** (ici **domticz-http**)
+dans le cas de plusieurs plugins utiliser un module **switch** avec comme discriminant `msg.payload.options.plugin` renvoyé par **win-sarah** (ici **domticz-http**)
 
 ![GitHub Logo](/images/switch.png)
 
